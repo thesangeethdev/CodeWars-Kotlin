@@ -1,12 +1,17 @@
-//fun hasDuplicate(nums: IntArray): Boolean {
-//
-//    for (i in nums){
-//        if (i )
-//    }
-//    return true
-//}
+fun hasDuplicate(nums: IntArray): Boolean {
+
+    var stack = mutableListOf<Int>()
+    for (i in nums){
+
+        if (stack.contains(i)){
+            return true
+        }
+        stack.add(i)
+    }
+    return false
+}
 
 fun main() {
-//    hasDuplicate(intArrayOf(1, 2, 3, 3))
+    println(hasDuplicate(intArrayOf(1, 2, 3, 4)))
 }
 
