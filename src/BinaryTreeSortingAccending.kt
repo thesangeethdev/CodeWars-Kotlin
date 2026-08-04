@@ -1,6 +1,7 @@
 fun main() {
 
     var intArray = intArrayOf(1,0,0,1,0,1,1,1,0,0,0)
+    intArray.sort()
 //    var intArray = intArrayOf(1,0,0,1)
 
     // initialize min value to first element of an array
