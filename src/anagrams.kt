@@ -1,14 +1,14 @@
 fun main() {
 
-    val str1 = "paper"
-    val str2 = "reapa"
+    val str1 = "cats"
+    val str2 = "tocs"
 
-    val charArray1 = str1.toCharArray()
+    val charArray1 = str1.toCharArray().toSortedSet()
     println(charArray1)
-    val charArray2 = str2.toCharArray()
+    val charArray2 = str2.toCharArray().toSortedSet()
     println(charArray2)
 
-    if (charArray1.contentEquals(charArray2)){
+    if (charArray1 == charArray2){
         println(true)
     }else{
         println(false)
