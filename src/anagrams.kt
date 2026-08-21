@@ -1,31 +1,28 @@
+import kotlin.collections.HashMap
+
 fun main(){
 
     val str1 = "pp"
     val str2 = "oo"
 
-    val hashMap1 = HashMap<Char, Int>()
-    val hashMap2 = HashMap<Char, Int>()
-
-    for (i in str1.toCharArray()){
-        if (hashMap1[i] == null){
-            hashMap1[i] = 0
-        }
-        hashMap1[i] = hashMap1[i]?.plus(1) ?: 0
-    }
-
-    for (i in str2.toCharArray()){
-        if (hashMap2[i] == null){
-            hashMap2[i] = 0
-        }
-        hashMap2[i] = hashMap2[i]?.plus(1) ?: 0
-    }
-
-    println(hashMap1)
-    println(hashMap2)
-
-    if (hashMap1 == hashMap2){
+    val count1 = charCount(str1)
+    val count2 = charCount(str2)
+    if (count1 == count2) {
         println(true)
-    }else{
+    } else {
         println(false)
     }
+}
+
+
+
+fun charCount (s : String) : HashMap<Char, Int>{
+    val count = HashMap<Char, Int>()
+    for (i in s.toCharArray()){
+        if (count[i] == null){
+            count[i] = 0
+        }
+        count[i] = count[i]?.plus(1) ?: 0
+    }
+    return count
 }
