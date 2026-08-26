@@ -13,7 +13,6 @@ fun main() {
                 hashMap[list[i]] = i //3:0, 2:1
             }
         }
-
     }
 
 }
