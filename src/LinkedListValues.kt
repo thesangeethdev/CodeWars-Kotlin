@@ -15,13 +15,19 @@ object Source {
         return list
     }
 
+    fun linkedListValuesRecursiveHelper(head: Node<String>?, values: MutableList<String>) {
+       if (head == null){
+           return
+       }
+        values.add(head.`val`)
+        linkedListValuesRecursiveHelper(head.next, values)
+    }
     fun linkedListValuesRecursive(head: Node<String>?): List<String> {
         val list = mutableListOf<String>()
-        val current : Node<String>? = head
 
-        if (current == null) return emptyList()
-        list.add(current.`val`)
-        return list + linkedListValuesRecursive(current.next)
+        linkedListValuesRecursiveHelper(head, list)
+        return list
+
     }
 
 
